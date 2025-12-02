@@ -101,7 +101,7 @@ for name, github_url, description in project_lines:
         "name": name,                # Take exactly from README
         "github": github_url,
         "description": description.strip(),
-        "image": image_url if image_url else None,  # Only set if it exists
+        "image": image_url if image_url else None,
         "technology": technology,
         "website": website if website else None
     })

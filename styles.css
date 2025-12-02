@@ -111,7 +111,8 @@ section {
   color: var(--background-color) !important;
 }
 
-.description, .technology {
+.description,
+.technology {
   margin: 0;
   color: var(--background-color);
   font-size: 17px;

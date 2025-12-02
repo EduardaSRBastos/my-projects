@@ -90,11 +90,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           website.rel = "noopener noreferrer";
           website.className = "website-link";
 
-          // Add text
           const textNode = document.createTextNode("Website ");
           website.appendChild(textNode);
 
-          // Add SVG icon
           const svgNS = "http://www.w3.org/2000/svg";
           const icon = document.createElementNS(svgNS, "svg");
           icon.setAttribute("viewBox", "0 0 640 640");
@@ -135,7 +133,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Go to Top button
 const goTopBtn = document.getElementById("goTopBtn");
 
-// Show button when scrolling down
 window.onscroll = function () {
   if (
     document.body.scrollTop > 300 ||
@@ -147,7 +144,6 @@ window.onscroll = function () {
   }
 };
 
-// Scroll to top when clicked
 goTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
