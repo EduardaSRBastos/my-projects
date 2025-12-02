@@ -1,0 +1,416 @@
+{
+    "A": [
+        {
+            "name": "Accessibility Project",
+            "github": "https://github.com/EduardaSRBastos/AccessibilityProject",
+            "description": "Web Accessibility School Project for Phone",
+            "image": null,
+            "technology": "HTML, CSS",
+            "website": null
+        },
+        {
+            "name": "Advent Of Code 2024",
+            "github": "https://github.com/EduardaSRBastos/advent-of-code-2024",
+            "description": "Dataweave Edition",
+            "image": null,
+            "technology": "DataWeave",
+            "website": null
+        },
+        {
+            "name": "Assembly 2020",
+            "github": "https://github.com/EduardaSRBastos/Assembly-2020",
+            "description": "Assembly School Exercises",
+            "image": null,
+            "technology": "Assembly",
+            "website": null
+        },
+        {
+            "name": "Astro Alert",
+            "github": "https://github.com/EduardaSRBastos/astro-alert",
+            "description": "A Discord bot that posts real-time moon phases, eclipses, and astronomy alerts, and lets users explore upcoming celestial events.",
+            "image": null,
+            "technology": "Python",
+            "website": null
+        }
+    ],
+    "C": [
+        {
+            "name": "C 2019",
+            "github": "https://github.com/EduardaSRBastos/C-2019",
+            "description": "C School Exercises",
+            "image": null,
+            "technology": "C",
+            "website": null
+        },
+        {
+            "name": "Calculator",
+            "github": "https://github.com/EduardaSRBastos/calculator",
+            "description": "An aesthetic calculator with hidden tricks and a cat-like style.",
+            "image": "https://github.com/user-attachments/assets/2474f3e4-a51c-4317-8c3c-6ae6830d6b05",
+            "technology": "JavaScript, CSS, HTML",
+            "website": "https://eduardasrbastos.github.io/calculator/"
+        },
+        {
+            "name": "Cpp 2020",
+            "github": "https://github.com/EduardaSRBastos/Cpp-2020",
+            "description": "C++ School Exercises",
+            "image": null,
+            "technology": "C++",
+            "website": null
+        },
+        {
+            "name": "Cpp 2021",
+            "github": "https://github.com/EduardaSRBastos/Cpp-2021",
+            "description": "C++ School Exercises (Btree)",
+            "image": null,
+            "technology": "C++",
+            "website": null
+        },
+        {
+            "name": "Csharp.net 2017",
+            "github": "https://github.com/EduardaSRBastos/CSharp.NET-2017",
+            "description": "C# .NET School Exercises",
+            "image": null,
+            "technology": "C#",
+            "website": null
+        },
+        {
+            "name": "Csharp.net Console 2017",
+            "github": "https://github.com/EduardaSRBastos/CSharp.NET-Console-2017",
+            "description": "C# .NET Console School Exercises",
+            "image": null,
+            "technology": "C#",
+            "website": null
+        },
+        {
+            "name": "Css Projects",
+            "github": "https://github.com/EduardaSRBastos/css-projects",
+            "description": "Animation Projects using HTML, CSS and JS",
+            "image": null,
+            "technology": "CSS, JavaScript, HTML",
+            "website": "https://eduardasrbastos.github.io/css-projects/"
+        }
+    ],
+    "D": [
+        {
+            "name": "Dataweave Challenges",
+            "github": "https://github.com/EduardaSRBastos/dataweave-challenges",
+            "description": "DataWeave challenges from <a href=\"https://www.prostdev.com/\">ProstDev.com</a> with explanations",
+            "image": null,
+            "technology": "DataWeave",
+            "website": null
+        },
+        {
+            "name": "Dataweave Exercises",
+            "github": "https://github.com/EduardaSRBastos/dataweave-exercises",
+            "description": "Dataweave practical exercises",
+            "image": null,
+            "technology": "DataWeave",
+            "website": null
+        },
+        {
+            "name": "Dataweave Utilities",
+            "github": "https://github.com/EduardaSRBastos/dataweave-utilities",
+            "description": "Collection of useful dataweave functions",
+            "image": null,
+            "technology": "DataWeave",
+            "website": null
+        },
+        {
+            "name": "Distributed Systems 2022",
+            "github": "https://github.com/EduardaSRBastos/DistributedSystems-2022",
+            "description": "Distributed Systems School Projects in C and C#",
+            "image": null,
+            "technology": "C#, C",
+            "website": null
+        }
+    ],
+    "E": [
+        {
+            "name": "EduardaSRBastos",
+            "github": "https://github.com/EduardaSRBastos/EduardaSRBastos",
+            "description": "My Profile Readme",
+            "image": null,
+            "technology": "",
+            "website": "https://github.com/EduardaSRBastos"
+        },
+        {
+            "name": "Escape Puzzle",
+            "github": "https://github.com/EduardaSRBastos/escape-puzzle",
+            "description": "Escape Puzzle in HTML, JS and CSS.",
+            "image": null,
+            "technology": "HTML, CSS, JavaScript",
+            "website": "https://eduardasrbastos.github.io/escape-puzzle/"
+        }
+    ],
+    "F": [
+        {
+            "name": "Final Project 2018",
+            "github": "https://github.com/EduardaSRBastos/FinalProject-2018",
+            "description": "Technological Project of the Informatics and Multimedia Technologies Course (Col\u00e9gio de Gaia)",
+            "image": null,
+            "technology": "C#, HTML",
+            "website": null
+        },
+        {
+            "name": "Food Api Django",
+            "github": "https://github.com/EduardaSRBastos/FoodAPI_Django",
+            "description": "Django exercise",
+            "image": null,
+            "technology": "Python, JavaScript, HTML, CSS, PowerShell, Roff, C, Batchfile, Dockerfile",
+            "website": null
+        }
+    ],
+    "H": [
+        {
+            "name": "Hanabi",
+            "github": "https://github.com/EduardaSRBastos/Hanabi",
+            "description": "Game Hanabi written in C",
+            "image": null,
+            "technology": "C",
+            "website": null
+        },
+        {
+            "name": "Hiring Coders",
+            "github": "https://github.com/EduardaSRBastos/HiringCoders",
+            "description": "Programa Hiring Coders",
+            "image": null,
+            "technology": "JavaScript, HTML, CSS, TypeScript, Go",
+            "website": null
+        },
+        {
+            "name": "Html Css Php Js 2017",
+            "github": "https://github.com/EduardaSRBastos/HTML-CSS-PHP-JS-2017",
+            "description": "WEB Development School Exercises",
+            "image": null,
+            "technology": "HTML, JavaScript, PHP, CSS, Less, Hack",
+            "website": null
+        }
+    ],
+    "J": [
+        {
+            "name": "Java Udemy Course",
+            "github": "https://github.com/EduardaSRBastos/java-udemy-course",
+            "description": "<a href=\"https://udemy-redirect-app.herokuapp.com/java\">The Complete Java Development Bootcamp</a> Exercises",
+            "image": null,
+            "technology": "Java",
+            "website": null
+        }
+    ],
+    "L": [
+        {
+            "name": "Lettersoup",
+            "github": "https://github.com/EduardaSRBastos/LetterSoup",
+            "description": "Game Letter Soup written in C++",
+            "image": null,
+            "technology": "C++, TeX",
+            "website": null
+        }
+    ],
+    "M": [
+        {
+            "name": "Malassezia Checker",
+            "github": "https://github.com/EduardaSRBastos/malassezia-checker",
+            "description": "A tool that checks ingredients for potential Malassezia triggers.",
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/malassezia-checker/refs/heads/main/assets/images/preview.png",
+            "technology": "JavaScript, HTML, CSS",
+            "website": "https://eduardasrbastos.github.io/malassezia-checker/"
+        },
+        {
+            "name": "My Essential Toolbox",
+            "github": "https://github.com/EduardaSRBastos/my-essential-toolbox",
+            "description": "A collection of essential digital tools designed to assist with everyday tasks.",
+            "image": "https://github.com/user-attachments/assets/995811cf-f845-48ad-82a6-3fd6ef3adb32",
+            "technology": "HTML, CSS, JavaScript",
+            "website": "https://eduardasrbastos.github.io/my-essential-toolbox/"
+        }
+    ],
+    "P": [
+        {
+            "name": "Pin Journey",
+            "github": "https://github.com/EduardaSRBastos/pin-journey",
+            "description": "An interactive map to track and visualize the places you've been.",
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/pin-journey/refs/heads/main/assets/images/preview.png",
+            "technology": "JavaScript, HTML, CSS",
+            "website": "https://eduardasrbastos.github.io/pin-journey/"
+        },
+        {
+            "name": "Portfolio",
+            "github": "https://github.com/EduardaSRBastos/portfolio",
+            "description": "My Portfolio Website",
+            "image": null,
+            "technology": "TypeScript, CSS, HTML",
+            "website": "https://eduardasrbastos.github.io/portfolio/"
+        },
+        {
+            "name": "Powerbi 2022",
+            "github": "https://github.com/EduardaSRBastos/PowerBI-2022",
+            "description": "Power BI School Exercises",
+            "image": null,
+            "technology": "",
+            "website": null
+        },
+        {
+            "name": "Profile Preferences Api",
+            "github": "https://github.com/EduardaSRBastos/profile-preferences-api",
+            "description": "The API allows users to create their account preferences.",
+            "image": null,
+            "technology": "JavaScript, TypeScript, HTML, Gherkin",
+            "website": null
+        },
+        {
+            "name": "Python Exercises",
+            "github": "https://github.com/EduardaSRBastos/Python-Exercises",
+            "description": "Python School Exercises",
+            "image": null,
+            "technology": "Python",
+            "website": null
+        },
+        {
+            "name": "Python Genderidecg",
+            "github": "https://github.com/EduardaSRBastos/Python-GenderIdECG",
+            "description": "Gender Identification with Electrocardiography in Python",
+            "image": null,
+            "technology": "Python",
+            "website": null
+        }
+    ],
+    "R": [
+        {
+            "name": "Repository Template",
+            "github": "https://github.com/EduardaSRBastos/repository-template",
+            "description": "A structured GitHub template with essential resources for new projects.",
+            "image": null,
+            "technology": "HTML, CSS, JavaScript",
+            "website": null
+        },
+        {
+            "name": "Resume Builder",
+            "github": "https://github.com/EduardaSRBastos/resume-builder",
+            "description": "A customizable resume builder template built using HTML, CSS, and JavaScript.",
+            "image": "https://github.com/user-attachments/assets/a5b427bb-7b9e-41ee-8e31-de6f90c9b778",
+            "technology": "JavaScript, CSS, HTML",
+            "website": "https://eduardasrbastos.github.io/resume-builder/"
+        },
+        {
+            "name": "Rss Reader",
+            "github": "https://github.com/EduardaSRBastos/RssReader",
+            "description": "Project using WPF and Xamarin Forms (c#)",
+            "image": null,
+            "technology": "C#",
+            "website": null
+        }
+    ],
+    "S": [
+        {
+            "name": "Samurai",
+            "github": "https://github.com/EduardaSRBastos/samurai",
+            "description": "Project made in Angular and C#",
+            "image": null,
+            "technology": "TypeScript, HTML, C#, CSS",
+            "website": null
+        },
+        {
+            "name": "Spotify Lyrics",
+            "github": "https://github.com/EduardaSRBastos/Spotify-Lyrics",
+            "description": "Displays the currently playing Spotify track and its lyrics",
+            "image": null,
+            "technology": "HTML, JavaScript",
+            "website": null
+        },
+        {
+            "name": "Sql 2021",
+            "github": "https://github.com/EduardaSRBastos/SQL-2021",
+            "description": "SQL School Exercises",
+            "image": null,
+            "technology": "TSQL",
+            "website": null
+        }
+    ],
+    "U": [
+        {
+            "name": "Uml 2021",
+            "github": "https://github.com/EduardaSRBastos/UML-2021",
+            "description": "UML School Exercises",
+            "image": null,
+            "technology": "",
+            "website": null
+        },
+        {
+            "name": "Unity 2018",
+            "github": "https://github.com/EduardaSRBastos/Unity-2018",
+            "description": "Unity School Exercises",
+            "image": null,
+            "technology": "ASP.NET, C#",
+            "website": null
+        },
+        {
+            "name": "Update License Year Action",
+            "github": "https://github.com/EduardaSRBastos/update-license-year-action",
+            "description": "This GitHub Action automatically updates the year in the `LICENSE` file of the repository.",
+            "image": null,
+            "technology": "Shell",
+            "website": null
+        }
+    ],
+    "V": [
+        {
+            "name": "Vb 2016",
+            "github": "https://github.com/EduardaSRBastos/VB-2016",
+            "description": "Visual Basic School Exercises",
+            "image": null,
+            "technology": "Visual Basic .NET",
+            "website": null
+        },
+        {
+            "name": "Vb.net 2016",
+            "github": "https://github.com/EduardaSRBastos/VB.NET-2016",
+            "description": "Visual Basic .NET School Exercises",
+            "image": null,
+            "technology": "Visual Basic .NET",
+            "website": null
+        },
+        {
+            "name": "Vision Simulator",
+            "github": "https://github.com/EduardaSRBastos/vision-simulator",
+            "description": "A vision simulator that recreates how humans and animals perceive the world through various visual conditions and color deficiencies.",
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/vision-simulator/refs/heads/main/assets/images/preview.png",
+            "technology": "JavaScript, HTML, CSS",
+            "website": "https://eduardasrbastos.github.io/vision-simulator/"
+        }
+    ],
+    "W": [
+        {
+            "name": "Webgl 2022",
+            "github": "https://github.com/EduardaSRBastos/WebGL-2022",
+            "description": "WebGL School Exercises",
+            "image": null,
+            "technology": "JavaScript, HTML",
+            "website": "https://eduardasrbastos.github.io/WebGL-2022/"
+        },
+        {
+            "name": "Webgl Project",
+            "github": "https://github.com/EduardaSRBastos/WebGL-Project",
+            "description": "Project Candyland in WebGL",
+            "image": null,
+            "technology": "JavaScript, HTML",
+            "website": "https://eduardasrbastos.github.io/WebGL-Project/"
+        },
+        {
+            "name": "What To Eat",
+            "github": "https://github.com/EduardaSRBastos/what-to-eat",
+            "description": "Interactive web app to choose what to eat by swiping food options left or right.",
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/what-to-eat/refs/heads/main/assets/images/preview.png",
+            "technology": "JavaScript, CSS, HTML",
+            "website": "https://eduardasrbastos.github.io/what-to-eat/"
+        },
+        {
+            "name": "Wpf 2021",
+            "github": "https://github.com/EduardaSRBastos/WPF-2021",
+            "description": "WPF School Exercises",
+            "image": null,
+            "technology": "C#",
+            "website": null
+        }
+    ]
+}

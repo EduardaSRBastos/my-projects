@@ -113,7 +113,7 @@ for letter in letters_present:
         # Format project name: uppercase first letters
         project_name_formatted = " ".join([w.capitalize() for w in project['name'].replace("-", " ").split()])
         # Project name as link
-        output += f"[**{project_name_formatted}:**]({project['url']})"
+        output += f"- [**{project_name_formatted}:**]({project['url']})"
         # Add description on the same line if exists
         if project['description']:
             output += f" {project['description']}"
