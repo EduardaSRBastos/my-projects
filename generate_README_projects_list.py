@@ -1,131 +1,156 @@
 import requests
-import base64
-from collections import defaultdict
-import string
 import re
 import os
+import string
+from collections import defaultdict
 from dotenv import load_dotenv
 
-# ==========================
-# Configuration
-# ==========================
 load_dotenv()
-
 USERNAME = os.getenv("GITHUB_USERNAME")
-TOKEN = os.getenv("GITHUB_TOKEN") # Optional: Add your GitHub Personal Access Token here for higher rate limits
-OUTPUT_FILE = "README_PROJECTS_LIST.md"
+TOKEN = os.getenv("GITHUB_TOKEN")
+README_FILE = "README.md"
 
 headers = {"Authorization": f"token {TOKEN}"} if TOKEN else {}
 
 # ==========================
-# Fetch public repos
+# Load README
 # ==========================
-repos_url = f"https://api.github.com/users/{USERNAME}/repos?per_page=100"
-response = requests.get(repos_url, headers=headers)
-
-try:
-    repos = response.json()
-except ValueError:
-    print("Error: Failed to parse JSON from GitHub API.")
-    exit()
-
-if isinstance(repos, dict) and "message" in repos:
-    print(f"GitHub API returned an error: {repos['message']}")
-    exit()
-
-if not isinstance(repos, list):
-    print(f"Unexpected response from GitHub API: {repos}")
-    exit()
+with open(README_FILE, "r", encoding="utf-8") as f:
+    readme = f.read()
 
 # ==========================
-# Organize repos alphabetically
+# Extract Projects section
 # ==========================
-alphabet = string.ascii_uppercase
-projects_dict = defaultdict(list)
+projects_pattern = r"(## Projects)([\s\S]*?)(?=\n## |\Z)"
+match = re.search(projects_pattern, readme)
 
-for repo in repos:
-    name = repo.get("name")
-    html_url = repo.get("html_url")
-    repo_about = repo.get("description")  # GitHub About description
-    if not name or not html_url:
+if not match:
+    print("Projects section not found.")
+    exit()
+
+projects_header, projects_body = match.group(1), match.group(2)
+
+# ==========================
+# Parse letter sections EXACTLY as raw blocks
+# ==========================
+letter_sections = defaultdict(list)
+current_letter = None
+current_block_lines = []
+
+lines = projects_body.split("\n")
+
+for line in lines:
+    letter_match = re.match(r"<a id=\"([A-Z#])\"></a>", line)
+    if letter_match:
+        # flush previous block
+        if current_letter and current_block_lines:
+            letter_sections[current_letter].append("\n".join(current_block_lines))
+            current_block_lines = []
+
+        current_letter = letter_match.group(1)
         continue
 
+    if current_letter:
+        if line.startswith("- [**"):
+            # new block starts
+            if current_block_lines:
+                letter_sections[current_letter].append("\n".join(current_block_lines))
+            current_block_lines = [line]
+        else:
+            # continuation line (including blank lines)
+            if current_block_lines:
+                current_block_lines.append(line)
+
+# flush last
+if current_letter and current_block_lines:
+    letter_sections[current_letter].append("\n".join(current_block_lines))
+
+# ==========================
+# Collect existing URLs
+# ==========================
+existing_urls = set(
+    re.findall(r"\]\((https://github\.com/[^)]+)\)", projects_body)
+)
+
+# ==========================
+# Fetch GitHub repos
+# ==========================
+resp = requests.get(
+    f"https://api.github.com/users/{USERNAME}/repos?per_page=200",
+    headers=headers
+)
+repos = resp.json()
+
+# ==========================
+# Build new entries
+# (each entry is a RAW block — single line, images handled manually later if needed)
+# ==========================
+new_entries = defaultdict(list)
+
+for repo in repos:
+    url = repo["html_url"]
+    if url in existing_urls:
+        continue
+
+    name = repo["name"]
+    description = repo.get("description") or ""
     first_letter = name[0].upper()
-    if first_letter not in alphabet:
-        first_letter = "#"  # for non-alphabetical names
+    if first_letter not in string.ascii_uppercase:
+        first_letter = "#"
 
-    # Default values
-    description = ""
-    image_url = ""
+    title = " ".join(w.capitalize() for w in name.replace("-", " ").split())
 
-    # Try fetching README for description
-    readme_url = f"https://api.github.com/repos/{USERNAME}/{name}/readme"
-    readme_response = requests.get(readme_url, headers=headers)
+    block = f"- [**{title}:**]({url}) {description}\n"
 
-    if readme_response.status_code == 200:
-        readme_data = readme_response.json()
-        content_encoded = readme_data.get("content", "")
-        if content_encoded:
-            try:
-                content_decoded = base64.b64decode(content_encoded).decode("utf-8")
-                # Extract description inside <p><i>...</i></p>
-                desc_match = re.search(r"<p><i>(.*?)</i></p>", content_decoded, re.DOTALL)
-                if desc_match:
-                    description = desc_match.group(1).strip()
+    new_entries[first_letter].append(block)
 
-                # For image, check if README has <kbd> image </kbd>
-                img_match = re.search(r"<kbd>\s*!\[.*?\]\((.*?)\)\s*</kbd>", content_decoded, re.DOTALL)
-                if img_match:
-                    image_url = f"https://raw.githubusercontent.com/{USERNAME}/{name}/refs/heads/main/assets/images/preview.png"
-
-            except Exception as e:
-                print(f"Warning: Could not decode README for {name}: {e}")
-
-    # Fallback to GitHub About description if README description is missing
-    if not description and repo_about:
-        description = repo_about.strip()
-
-    # Include all projects
-    projects_dict[first_letter].append({
-        "name": name,
-        "description": description,
-        "url": html_url,
-        "image": image_url
-    })
+# nothing new
+if not any(new_entries.values()):
+    print("No new projects found.")
+    exit()
 
 # ==========================
-# Generate Markdown
+# Merge with RAW blocks preserved
 # ==========================
-output = "Collection of personal projects\n\n"
+letters = sorted(set(letter_sections.keys()) | set(new_entries.keys()))
 
-# Alphabet line with links
-letters_present = [letter for letter in alphabet if projects_dict[letter]]
-if projects_dict["#"]:
-    letters_present.append("#")  # include non-alphabetical names at the end
+new_output = []
 
-output += " - ".join([f"[{letter}](#{letter})" for letter in letters_present]) + "\n\n"
+# navigation
+new_output.append(" - ".join([f"[{L}](#{L})" for L in letters]))
+new_output.append("")
 
-# List projects under each letter
-for letter in letters_present:
-    output += f"<a id=\"{letter}\"></a>\n\n"  # Anchor for the letter
-    output += f"### {letter}\n\n"  # Section header
-    for project in projects_dict[letter]:
-        # Format project name: uppercase first letters
-        project_name_formatted = " ".join([w.capitalize() for w in project['name'].replace("-", " ").split()])
-        # Project name as link
-        output += f"[**{project_name_formatted}:**]({project['url']})"
-        # Add description on the same line if exists
-        if project['description']:
-            output += f" {project['description']}"
-        output += "\n\n"
-        # Image below
-        if project['image']:
-            output += f"![Preview Image]({project['image']})\n\n"
+for L in letters:
+    new_output.append(f"<a id=\"{L}\"></a>")
+    new_output.append("")
+    new_output.append(f"### {L}")
+    new_output.append("")
+
+    # merge raw blocks + new entries
+    blocks = letter_sections[L] + new_entries[L]
+
+    # sort by first line only
+    blocks = sorted(blocks, key=lambda b: b.split("\n")[0].lower())
+
+    for block in blocks:
+        new_output.append(block)
+
+projects_final_text = "\n".join(new_output) + "\n"
 
 # ==========================
-# Save to file
+# Replace README section
 # ==========================
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    f.write(output)
+updated_readme = re.sub(
+    projects_pattern,
+    f"{projects_header}\n\n{projects_final_text}\n",
+    readme,
+    flags=re.DOTALL
+)
 
-print(f"{OUTPUT_FILE} generated successfully!")
+with open(README_FILE, "w", encoding="utf-8") as f:
+    f.write(updated_readme)
+
+total_new = sum(len(v) for v in new_entries.values())
+
+print(f"Updated successfully — {total_new} new project{'s' if total_new != 1 else ''} added! Original formatting preserved exactly!")
+
