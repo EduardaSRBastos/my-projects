@@ -26,37 +26,59 @@
 
 ## Features
 
-- **Alphabetical Project Index**: All your projects are organized from A-Z for easy browsing.  
-- **Project Descriptions**: Each project shows a short summary with technologies used.  
-- **Links to GitHub and Live Website**: Quick access to both the repository and live demo.  
-- **Responsive Design**: Works well on desktop, tablet, and mobile.  
-- **Easy to Update**: Add a new repository and regenerate the list automatically.  
-- **.env Integration**: Securely store your GitHub username and personal access token for API access.
+* **Automatic Project Index**: All your projects are organized alphabetically (A-Z) and updated automatically.
+* **Project Detailed**: Each project includes a short description, technologies used image preview, and optional live website link.
+* **Live Website Links**: Quick access to the repository and live demo if available.
+* **Responsive Design**: Works well on desktop, tablet, and mobile.
+* **Automated Updates**: New repositories are automatically added via GitHub Actions workflows.
+* **.env Integration**: Securely store your GitHub username and personal access token for API access.
+* **Website JSON Generation**: The workflow also generates `WEBSITE_PROJECTS_LIST.json` for web use.
 
 <br>
 
 ## How to Use
 
-> **Note:** This script is designed to work only with the [repository template](https://github.com/EduardaSRBastos/repository-template). Other projects may not be compatible.
+> **Note:** This setup is designed for repositories created from the [repository template](https://github.com/EduardaSRBastos/repository-template).
 
-1. **Clone the Repository Template**:  
+1. **Clone the Repository Template**:
+
    ```bash
    git clone https://github.com/EduardaSRBastos/repository-template.git
    cd repository-template
    ```
 
-2. **Set Up Your Environment**: In the root of your project (created from the template), create a `.env` file with the following variables:
-    ```env
-    GITHUB_USERNAME=YourGitHubUsername
-    GITHUB_TOKEN=YourPersonalAccessToken
-    ```
-   > You can leave `GITHUB_TOKEN` empty for unauthenticated requests, but rate limits will be low.  
+2. **Set Up Your Environment**: Create a `.env` file in the root of your project:
 
-3. **Run the Script**: Execute `generate_README_projects_list.py` to automatically generate your README-style project list.  
+   ```env
+   GITHUB_USERNAME=YourGitHubUsername
+   GITHUB_TOKEN=YourPersonalAccessToken
+   ```
 
-4. **Deploy/Update Website**: Embed the generated list in your README file.  
+   > `GITHUB_TOKEN` can be left empty for unauthenticated requests, but rate limits will be lower.
 
-5. **Add New Projects**: When you add new repositories, simply re-run the script to update the list automatically.
+3. **Automated Updates via GitHub Actions**:
+
+   * A workflow runs every 3 days (or manually via "Run workflow") to:
+
+     1. Update `README.md` with new projects.
+     2. Generate `WEBSITE_PROJECTS_LIST.json` for your website.
+   * No manual execution is required after setup.
+
+4. **Manual Update (Optional)**: If you want to trigger updates immediately:
+
+   ```bash
+   python generate_README_projects_list.py
+   python generate_WEBSITE_projects_list.py
+   ```
+
+   > This updates both the README and the website JSON locally.
+
+5. **Add New Projects**:
+
+   * Simply push new repositories to GitHub.
+   * The workflow will automatically include them in the next scheduled run.
+
+This ensures your project list in the README and website JSON is always synchronized and up-to-date without manual maintenance.
 
 <br>
 
@@ -233,8 +255,6 @@
 ![Preview Image](https://raw.githubusercontent.com/EduardaSRBastos/what-to-eat/refs/heads/main/assets/images/preview.png)
 
 - [**Wpf 2021:**](https://github.com/EduardaSRBastos/WPF-2021) WPF School Exercises
-
-
 
 ## PageSpeed Insights Performance Score
 <div align="center">
