@@ -31,7 +31,7 @@ if not match:
 projects_header, projects_body = match.group(1), match.group(2)
 
 # ==========================
-# Parse letter sections EXACTLY as raw blocks
+# Parse letter sections
 # ==========================
 letter_sections = defaultdict(list)
 current_letter = None
@@ -52,16 +52,13 @@ for line in lines:
 
     if current_letter:
         if line.startswith("- [**"):
-            # new block starts
             if current_block_lines:
                 letter_sections[current_letter].append("\n".join(current_block_lines))
             current_block_lines = [line]
         else:
-            # continuation line (including blank lines)
             if current_block_lines:
                 current_block_lines.append(line)
 
-# flush last
 if current_letter and current_block_lines:
     letter_sections[current_letter].append("\n".join(current_block_lines))
 
@@ -83,7 +80,6 @@ repos = resp.json()
 
 # ==========================
 # Build new entries
-# (each entry is a RAW block — single line, images handled manually later if needed)
 # ==========================
 new_entries = defaultdict(list)
 
@@ -104,7 +100,6 @@ for repo in repos:
 
     new_entries[first_letter].append(block)
 
-# nothing new
 if not any(new_entries.values()):
     print("No new projects found.")
     exit()
@@ -135,7 +130,7 @@ for L in letters:
     for block in blocks:
         new_output.append(block)
 
-projects_final_text = "\n".join(new_output) + "\n"
+projects_final_text = "\n".join(new_output)
 
 # ==========================
 # Replace README section

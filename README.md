@@ -50,11 +50,11 @@
 2. **Set Up Your Environment**: Create a `.env` file in the root of your project:
 
    ```env
-   GIT_USERNAME=YourGitHubUsername
-   GIT_TOKEN=YourPersonalAccessToken
+   GITHUB_USERNAME=YourGitHubUsername
+   GITHUB_TOKEN=YourPersonalAccessToken
    ```
 
-   > `GIT_TOKEN` can be left empty for unauthenticated requests, but rate limits will be lower.
+   > `GITHUB_TOKEN` can be left empty for unauthenticated requests, but rate limits will be lower.
 
 3. **Automated Updates via GitHub Actions**:
 
@@ -255,10 +255,6 @@ This ensures your project list in the README and website JSON is always synchron
 ![Preview Image](https://raw.githubusercontent.com/EduardaSRBastos/what-to-eat/refs/heads/main/assets/images/preview.png)
 
 - [**Wpf 2021:**](https://github.com/EduardaSRBastos/WPF-2021) WPF School Exercises
-
-
-
-
 
 ## PageSpeed Insights Performance Score
 <div align="center">
