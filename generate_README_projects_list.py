@@ -137,7 +137,7 @@ projects_final_text = "\n".join(new_output)
 # ==========================
 updated_readme = re.sub(
     projects_pattern,
-    f"{projects_header}\n\n{projects_final_text}\n",
+    f"{projects_header}\n\n{projects_final_text}",
     readme,
     flags=re.DOTALL
 )
