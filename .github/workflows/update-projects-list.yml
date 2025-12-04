@@ -30,35 +30,57 @@ jobs:
           python -m pip install --upgrade pip
           pip install python-dotenv requests
 
-      # 4. Run scripts
-      - name: Generate projects list
+      # 4a. Generate README
+      - name: Generate README
         env:
           GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-        run: |
-          python generate_README_projects_list.py
-          python generate_WEBSITE_projects_list.py
+        run: python generate_README_projects_list.py
 
-      # 5. Commit changes
-      - name: Commit changes
-        id: commit
+      # 4b. Commit README changes
+      - name: Commit README
+        id: commit_readme
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md WEBSITE_PROJECTS_LIST.json
+          git add README.md
           if git diff --cached --quiet; then
-            echo "no_changes=true" >> $GITHUB_OUTPUT
-            echo "No changes to commit"
+            echo "no_readme_changes=true" >> $GITHUB_OUTPUT
+            echo "No README changes"
           else
-            git commit -m "Update projects list [ci skip]"
+            git commit -m "Update README projects list [ci skip]"
             git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:develop
-            echo "no_changes=false" >> $GITHUB_OUTPUT
+            echo "no_readme_changes=false" >> $GITHUB_OUTPUT
           fi
 
-      # 6. Notify new projects via GitHub issue
+      # 4c. Generate WEBSITE_PROJECTS_LIST.json
+      - name: Generate WEBSITE_PROJECTS_LIST
+        env:
+          GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: python generate_WEBSITE_projects_list.py
+
+      # 4d. Commit WEBSITE_PROJECTS_LIST.json changes
+      - name: Commit WEBSITE_PROJECTS_LIST
+        id: commit_website
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add WEBSITE_PROJECTS_LIST.json
+          if git diff --cached --quiet; then
+            echo "no_website_changes=true" >> $GITHUB_OUTPUT
+            echo "No WEBSITE_PROJECTS_LIST.json changes"
+          else
+            git commit -m "Update WEBSITE_PROJECTS_LIST.json [ci skip]"
+            git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:develop
+            echo "no_website_changes=false" >> $GITHUB_OUTPUT
+          fi 
+
+      # 5. Notify new projects via GitHub issue
       - name: Notify new projects added
-        if: steps.commit.outputs.no_changes == 'false'
+        if: steps.commit_website.outputs.no_website_changes == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           REPO: ${{ github.repository }}
