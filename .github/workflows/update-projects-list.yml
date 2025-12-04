@@ -54,6 +54,7 @@ jobs:
             git commit -m "Update projects list [ci skip]"
             git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:develop
             echo "no_changes=false" >> $GITHUB_OUTPUT
+          fi
 
       # 6. Notify new projects via GitHub issue
       - name: Notify new projects added
