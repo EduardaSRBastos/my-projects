@@ -1,5 +1,5 @@
 :root {
-  --main-color: #7481f5;
+  --main-color: #969FF8;
   --second-color: #a0b0ff;
   --background-color: #1a0f4f;
   --light-color: #ffffff;
@@ -103,11 +103,12 @@ section {
   font-size: 24px !important;
   background: var(--main-color) !important;
   margin: 0 !important;
-  color: var(--light-color);
+  color: var(--background-color) !important;
 }
 
 .project-card:nth-child(odd) .link {
   background: var(--card-bg) !important;
+  color: var(--light-color) !important;
 }
 
 .project-card:nth-child(odd) .link:hover {
@@ -115,7 +116,7 @@ section {
 }
 
 .link:hover {
-  color: var(--background-color) !important;
+  color: var(--light-color) !important;
 }
 
 .description,
@@ -154,7 +155,6 @@ section {
 .website-link:hover,
 .link:hover {
   color: var(--second-color);
-  background: var(--card-bg);
   text-decoration: underline;
 }
 
