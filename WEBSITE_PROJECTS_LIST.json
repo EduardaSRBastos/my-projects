@@ -14,15 +14,15 @@
             "description": "Dataweave Edition",
             "image": null,
             "technology": "DataWeave",
-            "website": "https://adventofcode.com"
+            "website": null
         },
         {
             "name": "Advent Of Code 2025",
             "github": "https://github.com/EduardaSRBastos/advent-of-code-2025",
-            "description": "Advent of Code 2025 - JavaScript Edition",
+            "description": "JavaScript Edition",
             "image": null,
             "technology": null,
-            "website": "https://adventofcode.com"
+            "website": null
         },
         {
             "name": "Assembly 2020",
