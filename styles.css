@@ -1,20 +1,20 @@
 :root {
-  --main-color: #8f9afa;
-  --second-color: #111fa1;
-  --background-color: #1d0c60;
-  --light-color: #f5f2ff;
-  --card-bg: #5f67db;
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --main-color: #7481f5;
+  --second-color: #a0b0ff;
+  --background-color: #1a0f4f;
+  --light-color: #ffffff;
+  --card-bg: #3949ab;
+  --card-shadow: rgba(0, 0, 0, 0.4);
   --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-  scrollbar-color: var(--second-color) var(--main-color);
+  scrollbar-color: var(--light-color) var(--main-color);
   min-height: 100%;
   min-width: 100%;
   font-family: var(--font-family);
   background: var(--background-color);
-  color: var(--second-color);
+  color: var(--light-color);
 }
 
 body {
@@ -82,10 +82,12 @@ section {
   flex-direction: column;
   gap: 10px;
   transition: transform 0.2s, box-shadow 0.2s;
+  color: var(--background-color);
 }
 
 .project-card:nth-child(even) {
   background: var(--card-bg);
+  color: var(--light-color);
 }
 
 .project-card:hover {
@@ -101,10 +103,15 @@ section {
   font-size: 24px !important;
   background: var(--main-color) !important;
   margin: 0 !important;
+  color: var(--light-color);
 }
 
 .project-card:nth-child(odd) .link {
   background: var(--card-bg) !important;
+}
+
+.project-card:nth-child(odd) .link:hover {
+  color: var(--second-color) !important;
 }
 
 .link:hover {
@@ -114,8 +121,11 @@ section {
 .description,
 .technology {
   margin: 0;
-  color: var(--background-color);
   font-size: 17px;
+}
+
+.description a {
+  color: var(--light-color);
 }
 
 .technology {
@@ -125,21 +135,26 @@ section {
 .website-link,
 .link {
   display: inline-block;
-  text-decoration: none;
-  color: var(--light-color);
-  background: var(--second-color);
   padding: 6px 12px;
   border-radius: 5px;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
   text-align: center;
   font-size: 20px;
   box-shadow: 0 0 5px var(--card-shadow);
   margin: 15px 0 10px 0;
+  text-decoration: none;
+  color: var(--light-color);
+  background: var(--background-color);
+}
+
+.website-link {
+  color: var(--light-color);
 }
 
 .website-link:hover,
 .link:hover {
-  color: var(--main-color);
+  color: var(--second-color);
+  background: var(--card-bg);
   text-decoration: underline;
 }
 
@@ -167,7 +182,7 @@ img {
 }
 
 #goTopBtn:hover {
-  color: var(--second-color);
+  color: var(--light-color);
 }
 
 footer {
