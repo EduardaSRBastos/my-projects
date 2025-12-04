@@ -94,7 +94,7 @@ This ensures your project list in the README and website JSON is always synchron
 
 - [**Advent Of Code 2024:**](https://github.com/EduardaSRBastos/advent-of-code-2024) Dataweave Edition
 
-- [**Advent Of Code 2025:**](https://github.com/EduardaSRBastos/advent-of-code-2025) Advent of Code 2025 - JavaScript Edition
+- [**Advent Of Code 2025:**](https://github.com/EduardaSRBastos/advent-of-code-2025) JavaScript Edition
 
 - [**Assembly 2020:**](https://github.com/EduardaSRBastos/Assembly-2020) Assembly School Exercises
 
