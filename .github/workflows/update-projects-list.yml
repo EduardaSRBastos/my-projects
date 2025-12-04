@@ -2,7 +2,7 @@ name: Update Projects List
 
 on:
   schedule:
-    - cron: "0 0 */3 * *"
+    - cron: "0 0 */3 * *"  # Every 3 days at midnight UTC
   workflow_dispatch:
 
 jobs:
@@ -10,22 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout develop branch
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: false 
+          ref: develop
+          fetch-depth: 0
+          persist-credentials: false
 
+      # 2. Setup Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
+      # 3. Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install python-dotenv requests
 
-      - name: Run scripts
+      # 4. Run scripts
+      - name: Generate projects list
         env:
           GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
@@ -33,10 +39,31 @@ jobs:
           python generate_README_projects_list.py
           python generate_WEBSITE_projects_list.py
 
+      # 5. Commit changes
       - name: Commit changes
+        id: commit
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md WEBSITE_PROJECTS_LIST.json
-          git commit -m "Update projects list [ci skip]" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:develop
+          if git diff --cached --quiet; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            git commit -m "Update projects list [ci skip]"
+            git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:develop
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+
+      # 6. Notify new projects via GitHub issue
+      - name: Notify new projects added
+        if: steps.commit.outputs.no_changes == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/$REPO/issues \
+            -d '{"title":"Projects List Updated","body":"New projects have been added to the projects list. Check the latest commit on the develop branch.","labels":["automation"]}'

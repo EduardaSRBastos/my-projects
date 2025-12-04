@@ -5,7 +5,7 @@
             "github": "https://github.com/EduardaSRBastos/AccessibilityProject",
             "description": "Web Accessibility School Project for Phone",
             "image": null,
-            "technology": "HTML, CSS",
+            "technology": "CSS, HTML",
             "website": null
         },
         {
@@ -47,7 +47,7 @@
             "github": "https://github.com/EduardaSRBastos/calculator",
             "description": "An aesthetic calculator with hidden tricks and a cat-like style.",
             "image": "https://github.com/user-attachments/assets/2474f3e4-a51c-4317-8c3c-6ae6830d6b05",
-            "technology": "JavaScript, CSS, HTML",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/calculator/"
         },
         {
@@ -87,7 +87,7 @@
             "github": "https://github.com/EduardaSRBastos/css-projects",
             "description": "Animation Projects using HTML, CSS and JS",
             "image": null,
-            "technology": "CSS, JavaScript, HTML",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/css-projects/"
         }
     ],
@@ -121,7 +121,7 @@
             "github": "https://github.com/EduardaSRBastos/DistributedSystems-2022",
             "description": "Distributed Systems School Projects in C and C#",
             "image": null,
-            "technology": "C#, C",
+            "technology": "C, C#",
             "website": null
         }
     ],
@@ -131,7 +131,7 @@
             "github": "https://github.com/EduardaSRBastos/EduardaSRBastos",
             "description": "My Profile Readme",
             "image": null,
-            "technology": "",
+            "technology": null,
             "website": "https://github.com/EduardaSRBastos"
         },
         {
@@ -139,7 +139,7 @@
             "github": "https://github.com/EduardaSRBastos/escape-puzzle",
             "description": "Escape Puzzle in HTML, JS and CSS.",
             "image": null,
-            "technology": "HTML, CSS, JavaScript",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/escape-puzzle/"
         }
     ],
@@ -147,7 +147,7 @@
         {
             "name": "Final Project 2018",
             "github": "https://github.com/EduardaSRBastos/FinalProject-2018",
-            "description": "Technological Project of the Informatics and Multimedia Technologies Course (Col\u00e9gio de Gaia)",
+            "description": "Technological Project of the Informatics and Multimedia Technologies Course (Colégio de Gaia)",
             "image": null,
             "technology": "C#, HTML",
             "website": null
@@ -157,7 +157,7 @@
             "github": "https://github.com/EduardaSRBastos/FoodAPI_Django",
             "description": "Django exercise",
             "image": null,
-            "technology": "Python, JavaScript, HTML, CSS, PowerShell, Roff, C, Batchfile, Dockerfile",
+            "technology": "Batchfile, C, CSS, Dockerfile, HTML, JavaScript, PowerShell, Python, Roff",
             "website": null
         }
     ],
@@ -175,7 +175,7 @@
             "github": "https://github.com/EduardaSRBastos/HiringCoders",
             "description": "Programa Hiring Coders",
             "image": null,
-            "technology": "JavaScript, HTML, CSS, TypeScript, Go",
+            "technology": "CSS, Go, HTML, JavaScript, TypeScript",
             "website": null
         },
         {
@@ -183,7 +183,7 @@
             "github": "https://github.com/EduardaSRBastos/HTML-CSS-PHP-JS-2017",
             "description": "WEB Development School Exercises",
             "image": null,
-            "technology": "HTML, JavaScript, PHP, CSS, Less, Hack",
+            "technology": "CSS, HTML, Hack, JavaScript, Less, PHP",
             "website": null
         }
     ],
@@ -213,7 +213,7 @@
             "github": "https://github.com/EduardaSRBastos/malassezia-checker",
             "description": "A tool that checks ingredients for potential Malassezia triggers.",
             "image": "https://raw.githubusercontent.com/EduardaSRBastos/malassezia-checker/refs/heads/main/assets/images/preview.png",
-            "technology": "JavaScript, HTML, CSS",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/malassezia-checker/"
         },
         {
@@ -221,7 +221,7 @@
             "github": "https://github.com/EduardaSRBastos/my-essential-toolbox",
             "description": "A collection of essential digital tools designed to assist with everyday tasks.",
             "image": "https://github.com/user-attachments/assets/995811cf-f845-48ad-82a6-3fd6ef3adb32",
-            "technology": "HTML, CSS, JavaScript",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/my-essential-toolbox/"
         }
     ],
@@ -231,7 +231,7 @@
             "github": "https://github.com/EduardaSRBastos/pin-journey",
             "description": "An interactive map to track and visualize the places you've been.",
             "image": "https://raw.githubusercontent.com/EduardaSRBastos/pin-journey/refs/heads/main/assets/images/preview.png",
-            "technology": "JavaScript, HTML, CSS",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/pin-journey/"
         },
         {
@@ -239,7 +239,7 @@
             "github": "https://github.com/EduardaSRBastos/portfolio",
             "description": "My Portfolio Website",
             "image": null,
-            "technology": "TypeScript, CSS, HTML",
+            "technology": "CSS, HTML, TypeScript",
             "website": "https://eduardasrbastos.github.io/portfolio/"
         },
         {
@@ -247,7 +247,7 @@
             "github": "https://github.com/EduardaSRBastos/PowerBI-2022",
             "description": "Power BI School Exercises",
             "image": null,
-            "technology": "",
+            "technology": null,
             "website": null
         },
         {
@@ -255,7 +255,7 @@
             "github": "https://github.com/EduardaSRBastos/profile-preferences-api",
             "description": "The API allows users to create their account preferences.",
             "image": null,
-            "technology": "JavaScript, TypeScript, HTML, Gherkin",
+            "technology": "Gherkin, HTML, JavaScript, TypeScript",
             "website": null
         },
         {
@@ -281,7 +281,7 @@
             "github": "https://github.com/EduardaSRBastos/repository-template",
             "description": "A structured GitHub template with essential resources for new projects.",
             "image": null,
-            "technology": "HTML, CSS, JavaScript",
+            "technology": "CSS, HTML, JavaScript",
             "website": null
         },
         {
@@ -289,7 +289,7 @@
             "github": "https://github.com/EduardaSRBastos/resume-builder",
             "description": "A customizable resume builder template built using HTML, CSS, and JavaScript.",
             "image": "https://github.com/user-attachments/assets/a5b427bb-7b9e-41ee-8e31-de6f90c9b778",
-            "technology": "JavaScript, CSS, HTML",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/resume-builder/"
         },
         {
@@ -307,7 +307,7 @@
             "github": "https://github.com/EduardaSRBastos/samurai",
             "description": "Project made in Angular and C#",
             "image": null,
-            "technology": "TypeScript, HTML, C#, CSS",
+            "technology": "C#, CSS, HTML, TypeScript",
             "website": null
         },
         {
@@ -333,7 +333,7 @@
             "github": "https://github.com/EduardaSRBastos/UML-2021",
             "description": "UML School Exercises",
             "image": null,
-            "technology": "",
+            "technology": null,
             "website": null
         },
         {
@@ -375,7 +375,7 @@
             "github": "https://github.com/EduardaSRBastos/vision-simulator",
             "description": "A vision simulator that recreates how humans and animals perceive the world through various visual conditions and color deficiencies.",
             "image": "https://raw.githubusercontent.com/EduardaSRBastos/vision-simulator/refs/heads/main/assets/images/preview.png",
-            "technology": "JavaScript, HTML, CSS",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/vision-simulator/"
         }
     ],
@@ -385,7 +385,7 @@
             "github": "https://github.com/EduardaSRBastos/WebGL-2022",
             "description": "WebGL School Exercises",
             "image": null,
-            "technology": "JavaScript, HTML",
+            "technology": "HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/WebGL-2022/"
         },
         {
@@ -393,7 +393,7 @@
             "github": "https://github.com/EduardaSRBastos/WebGL-Project",
             "description": "Project Candyland in WebGL",
             "image": null,
-            "technology": "JavaScript, HTML",
+            "technology": "HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/WebGL-Project/"
         },
         {
@@ -401,7 +401,7 @@
             "github": "https://github.com/EduardaSRBastos/what-to-eat",
             "description": "Interactive web app to choose what to eat by swiping food options left or right.",
             "image": "https://raw.githubusercontent.com/EduardaSRBastos/what-to-eat/refs/heads/main/assets/images/preview.png",
-            "technology": "JavaScript, CSS, HTML",
+            "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/what-to-eat/"
         },
         {

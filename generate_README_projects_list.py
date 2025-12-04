@@ -147,5 +147,5 @@ with open(README_FILE, "w", encoding="utf-8") as f:
 
 total_new = sum(len(v) for v in new_entries.values())
 
-print(f"Updated successfully — {total_new} new project{'s' if total_new != 1 else ''} added! Original formatting preserved exactly!")
+print(f"Updated successfully — {total_new} new project{'s' if total_new != 1 else ''} added!")
 
