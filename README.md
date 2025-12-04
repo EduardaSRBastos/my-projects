@@ -18,7 +18,6 @@
 - [Features](#features)
 - [How to Use](#how-to-use)
 - [Projects](#projects)
-- [Performance Score](#pagespeed-insights-performance-score)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -257,15 +256,6 @@ This ensures your project list in the README and website JSON is always synchron
 ![Preview Image](https://raw.githubusercontent.com/EduardaSRBastos/what-to-eat/refs/heads/main/assets/images/preview.png)
 
 - [**Wpf 2021:**](https://github.com/EduardaSRBastos/WPF-2021) WPF School Exercises
-
-## PageSpeed Insights Performance Score
-<div align="center">
-  
-| [Desktop](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-my-projects/zacmq8kevy?form_factor=desktop) | [Mobile](https://pagespeed.web.dev/analysis/https-eduardasrbastos-github-io-my-projects/zacmq8kevy?form_factor=mobile) |
-|-------|-------|
-| <kbd> ![image](desktop score image url) </kbd> | <kbd> ![image](mobile score image url) </kbd> |
-
-</div>
 
 ## Contributing
 - Support this project by giving it a star ⭐. Thanks!
