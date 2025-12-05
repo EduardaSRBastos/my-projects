@@ -2,7 +2,6 @@
   
 # My GitHub Projects
 [![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/my-projects?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/my-projects?tab=MIT-1-ov-file)
-[![GitHub Release](https://img.shields.io/github/v/release/EduardaSRBastos/my-projects?style=plastic&color=orange)](https://github.com/EduardaSRBastos/my-projects/releases)
 [![GitHub branch check runs](https://img.shields.io/github/check-runs/EduardaSRBastos/my-projects/main?style=plastic)](https://github.com/EduardaSRBastos/my-projects/actions)
 [![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/my-projects?style=plastic)](https://github.com/EduardaSRBastos/my-projects)
 
