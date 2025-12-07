@@ -82,6 +82,7 @@ jobs:
       - name: Notify new projects added
         if: steps.commit_website.outputs.no_website_changes == 'false'
         env:
+          GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
@@ -89,4 +90,7 @@ jobs:
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/$REPO/issues \
-            -d '{"title":"Projects List Updated","body":"New projects have been added to the projects list. Check the latest commit on the develop branch.","labels":["automation"]}'
+            -d "{\"title\":\"Projects List Updated\", \
+                \"body\":\"New projects have been added to the projects list. Check the latest commit on the develop branch.\", \
+                \"labels\":[\"automation\"], \
+                \"assignees\":[\"${GITHUB_USERNAME}\"]}"

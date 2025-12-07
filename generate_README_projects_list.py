@@ -95,8 +95,12 @@ for repo in repos:
         first_letter = "#"
 
     title = " ".join(w.capitalize() for w in name.replace("-", " ").split())
-
     block = f"- [**{title}:**]({url}) {description}\n"
+
+    image_url = f"https://raw.githubusercontent.com/{USERNAME}/{name}/main/assets/images/preview.png"
+    resp = requests.head(image_url)
+    if resp.status_code == 200:
+        block += f"\n![Preview Image]({image_url})\n"
 
     new_entries[first_letter].append(block)
 
