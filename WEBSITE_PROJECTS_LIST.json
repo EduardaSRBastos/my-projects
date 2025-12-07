@@ -14,15 +14,15 @@
             "description": "Dataweave Edition",
             "image": null,
             "technology": "DataWeave",
-            "website": null
+            "website": "https://adventofcode.com"
         },
         {
             "name": "Advent Of Code 2025",
             "github": "https://github.com/EduardaSRBastos/advent-of-code-2025",
             "description": "JavaScript Edition",
             "image": null,
-            "technology": null,
-            "website": null
+            "technology": "JavaScript",
+            "website": "https://adventofcode.com"
         },
         {
             "name": "Assembly 2020",
@@ -231,6 +231,14 @@
             "image": "https://github.com/user-attachments/assets/995811cf-f845-48ad-82a6-3fd6ef3adb32",
             "technology": "CSS, HTML, JavaScript",
             "website": "https://eduardasrbastos.github.io/my-essential-toolbox/"
+        },
+        {
+            "name": "My Projects",
+            "github": "https://github.com/EduardaSRBastos/my-projects",
+            "description": "A directory website that lists my GitHub projects.",
+            "image": null,
+            "technology": "CSS, HTML, JavaScript, Python",
+            "website": "https://eduardasrbastos.github.io/my-projects/"
         }
     ],
     "P": [
