@@ -236,7 +236,7 @@
             "name": "My Projects",
             "github": "https://github.com/EduardaSRBastos/my-projects",
             "description": "A directory website that lists my GitHub projects.",
-            "image": null,
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/my-projects/main/assets/images/preview.png",
             "technology": "CSS, HTML, JavaScript, Python",
             "website": "https://eduardasrbastos.github.io/my-projects/"
         }
