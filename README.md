@@ -180,6 +180,8 @@ This ensures your project list in the README and website JSON is always synchron
 
 ![Preview Image](https://github.com/user-attachments/assets/995811cf-f845-48ad-82a6-3fd6ef3adb32)
 
+- [**My Projects:**](https://github.com/EduardaSRBastos/my-projects) A directory website that lists my GitHub projects.
+
 <a id="P"></a>
 
 ### P
