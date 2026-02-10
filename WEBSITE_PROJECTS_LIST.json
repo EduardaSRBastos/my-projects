@@ -125,6 +125,14 @@
             "website": null
         },
         {
+            "name": "Dating Anniversary",
+            "github": "https://github.com/EduardaSRBastos/dating-anniversary",
+            "description": "",
+            "image": "https://raw.githubusercontent.com/EduardaSRBastos/dating-anniversary/main/assets/images/preview.png",
+            "technology": "CSS, HTML, JavaScript",
+            "website": null
+        },
+        {
             "name": "Distributed Systems 2022",
             "github": "https://github.com/EduardaSRBastos/DistributedSystems-2022",
             "description": "Distributed Systems School Projects in C and C#",
