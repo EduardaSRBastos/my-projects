@@ -128,7 +128,7 @@ This ensures your project list in the README and website JSON is always synchron
 
 - [**Dataweave Utilities:**](https://github.com/EduardaSRBastos/dataweave-utilities) Collection of useful dataweave functions
 
-- [**Dating Anniversary:**](https://github.com/EduardaSRBastos/dating-anniversary) 
+- [**Dating Anniversary:**](https://github.com/EduardaSRBastos/dating-anniversary) A small interactive website to celebrate our dating anniversary, filled with hearts, flowers, and sweet surprises. 
 
 ![Preview Image](https://raw.githubusercontent.com/EduardaSRBastos/dating-anniversary/main/assets/images/preview.png)
 
