@@ -128,6 +128,10 @@ This ensures your project list in the README and website JSON is always synchron
 
 - [**Dataweave Utilities:**](https://github.com/EduardaSRBastos/dataweave-utilities) Collection of useful dataweave functions
 
+- [**Dating Anniversary:**](https://github.com/EduardaSRBastos/dating-anniversary) 
+
+![Preview Image](https://raw.githubusercontent.com/EduardaSRBastos/dating-anniversary/main/assets/images/preview.png)
+
 - [**Distributed Systems 2022:**](https://github.com/EduardaSRBastos/DistributedSystems-2022) Distributed Systems School Projects in C and C#
 
 <a id="E"></a>
